@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 const initialState = [
-    {  _id:"67e60bf3721667aa78cbb004",
+    {  _id:"67efa6c5d0c6ce29177f4abc",
         shareName:"HDFCBANK",
         isBse:true,
         percentage:-6.05,
@@ -10,13 +10,13 @@ const initialState = [
         isUp:false,
         price:1705.80
       },{shareName:"INFY",
-        _id:"67e60bf3721667aa78cbb005",
+        _id:"67efa6c5d0c6ce29177f4abd",
         isBse:false,
         percentage:-11.00,
         profitPercentage:-0.69,
         isUp:false,
         price:1579.85
-      },{_id:"67e60bf3721667aa78cbb006",
+      },{_id:"67efa6c5d0c6ce29177f4abe",
         shareName:"TCS",
         isBse:true,
         percentage:-8.75,
@@ -24,7 +24,7 @@ const initialState = [
         isUp:true,
         price:3512.35
       },{
-        _id:"67e60bf3721667aa78cbb007",
+        _id:"67efa6c5d0c6ce29177f4abf",
         shareName:"ONGC",
         isBse:false,
         percentage:0.62,
@@ -32,7 +32,7 @@ const initialState = [
         isUp:true,
         price:225.02
       },{
-        _id:"67e60bf3721667aa78cbb008",
+        _id:"67efa6c5d0c6ce29177f4ac0",
         shareName:"HINDUNILVR",
         isBse:true,
         percentage:-17.00,
@@ -40,7 +40,7 @@ const initialState = [
         isUp:false,
         price:2175.85
       },{
-        _id:"67e60bf3721667aa78cbb009",
+        _id:"67efa6c5d0c6ce29177f4ac1",
         shareName:"GOLDBEES",
         isBse:false,
         percentage:-0.50,

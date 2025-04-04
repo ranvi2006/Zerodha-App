@@ -124,6 +124,7 @@ export default function MainPage() {
           quantity: quantity,
           id: buy.buy._id
         });
+        console.log(responce);
         if (responce.data.success) {
           dispatch(cencelBuy({}));
         }

@@ -218,6 +218,8 @@ const addOrder = async (req, res, next) => {
     }
 
     const share = await Share.findOne({ _id: id });
+    console.log("share--", share);
+    console.log(id);
     if (!share) {
         return res.json({
             success: false,
