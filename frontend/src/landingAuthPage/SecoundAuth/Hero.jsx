@@ -26,7 +26,7 @@ export default function Hero() {
         }
         else {
             try {
-                const url = "http://localhost:3000/auth/getUser";
+                const url = `${import.meta.env.VITE_API_URL}/auth/getUser`;
                 const response = await axios.post(url, {
                     phoneNo: localUser.phoneNo
                 });
@@ -70,7 +70,7 @@ export default function Hero() {
         if(field.name!="" &&field.email!="")
         {
             try{
-                const respone=await axios.post("http://localhost:3000/auth/sendDataAndUpdate",{
+                const respone=await axios.post(`${import.meta.env.VITE_API_URL}/auth/sendDataAndUpdate`,{
                     phoneNo:localUser.phoneNo,
                     name:field.name,
                     email:field.email

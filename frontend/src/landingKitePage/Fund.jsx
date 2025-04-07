@@ -35,7 +35,7 @@ export default function Fund() {
 
   async function creditfunds() {
     if (localUser.phoneNo && field.credit!=0) {
-      const responce = await axios.post("http://localhost:3000/auth/creditFunds", {
+      const responce = await axios.post(`${import.meta.env.VITE_API_URL}/auth/creditFunds`, {
         phoneNo: localUser.phoneNo,
         amount: field.credit
       });
@@ -66,7 +66,7 @@ console.log(responce.data);
   }
   async function debitfunds() {
     if (localUser.phoneNo && field.debit!=0) {
-      const responce = await axios.post("http://localhost:3000/auth/debitFunds", {
+      const responce = await axios.post(`${import.meta.env.VITE_API_URL}/auth/debitFunds`, {
         phoneNo: localUser.phoneNo,
         amount: field.debit
       });

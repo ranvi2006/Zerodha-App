@@ -48,7 +48,7 @@ export default function MainPage() {
   // ============================================
   async function fatchOrder() {
       if (localUser.phoneNo) {
-        const response = await axios.post("http://localhost:3000/auth/getOrder", { phoneNo: localUser.phoneNo });
+        const response = await axios.post(`${import.meta.env.VITE_API_URL}/auth/getOrder`, { phoneNo: localUser.phoneNo });
         
         dispatch(addOrder(response.data.orders));
       }
@@ -68,7 +68,7 @@ export default function MainPage() {
   }
   async function fatchWatchList() {
     if (localUser.phoneNo) {
-      const lists = await axios.post("http://localhost:3000/auth/getWatchList", {
+      const lists = await axios.post(`${import.meta.env.VITE_API_URL}/auth/getWatchList`, {
         phoneNo: localUser.phoneNo
       });
       // console.log("Lists",lists.data.watchlist);
@@ -88,7 +88,7 @@ export default function MainPage() {
     } else {
       try {
         if (localUser.phoneNo) {
-          const url = "http://localhost:3000/auth/getUser";
+          const url = `${import.meta.env.VITE_API_URL}/auth/getUser`;
           const response = await axios.post(url, {
             phoneNo: localUser.phoneNo
           });
@@ -119,7 +119,7 @@ export default function MainPage() {
     console.log((getUsedMargin()+((buy.buy.price*quantity)/100)*20),"==",user.totalFunds)
     if ((getUsedMargin()+((buy.buy.price*quantity)/100)*20)< user.totalFunds) {
       try {
-        const responce = await axios.post("http://localhost:3000/auth/addOrder", {
+        const responce = await axios.post(`${import.meta.env.VITE_API_URL}/auth/addOrder`, {
           phoneNo: localUser.phoneNo,
           quantity: quantity,
           id: buy.buy._id
@@ -152,7 +152,7 @@ export default function MainPage() {
    
     if (foundOrder.quantity>=quantity) {
       try {
-        const responce = await axios.post("http://localhost:3000/auth/removeOrder", {
+        const responce = await axios.post(`${import.meta.env.VITE_API_URL}/auth/removeOrder`, {
           phoneNo: localUser.phoneNo,
           quantity: quantity,
           id: buy.buy._id

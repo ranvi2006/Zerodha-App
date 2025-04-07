@@ -29,7 +29,7 @@ export default function Hero() {
     }
     else {
       try {
-        const url = "http://localhost:3000/auth/getUser";
+        const url = `${import.meta.env.VITE_API_URL}/auth/getUser`;
         const response = await axios.post(url, {
           phoneNo: localUser.phoneNo
         });
@@ -90,7 +90,7 @@ export default function Hero() {
             dob: formData.dob
           }
         }
-        const response = await axios.post("http://localhost:3000/auth/sendDataAndUpdate", body);
+        const response = await axios.post(`${import.meta.env.VITE_API_URL}/auth/sendDataAndUpdate`, body);
 
         dispatch(updateUser(response.data.user));
 

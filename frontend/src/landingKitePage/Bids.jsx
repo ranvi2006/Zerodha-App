@@ -16,7 +16,7 @@ export default function Bids() {
   
 
   async function fatchBid() {
-    const response=await axios.post("http://localhost:3000/auth/getBid",{});
+    const response=await axios.post(`${import.meta.env.VITE_API_URL}/auth/getBid`,{});
     dispatch(addBid(response.data.bids));
     
   }

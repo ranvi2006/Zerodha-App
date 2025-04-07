@@ -37,7 +37,7 @@ export default function SignUp() {
         }, 100);
 
         if (phone != "" && phone.length == 10) {
-            const url = "http://localhost:3000/auth/sendOtpAndAddNUmber";
+            const url = `${import.meta.env.VITE_API_URL}/auth/sendOtpAndAddNumber`;
             const body = {
                 phoneNo: phone
             };

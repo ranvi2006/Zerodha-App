@@ -15,7 +15,7 @@ export default function Order() {
 
   async function fatchOrder() {
     if (localUser.phoneNo) {
-      const response = await axios.post("http://localhost:3000/auth/getOrder", { phoneNo: localUser.phoneNo });
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/auth/getOrder`, { phoneNo: localUser.phoneNo });
       
       dispatch(addOrder(response.data.orders));
     }
